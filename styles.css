@@ -1,0 +1,114 @@
+:root{
+    --sakura-pink: #ffb7c5;
+    --sakura-light: #ffe4e8;
+    --accent-color: #ff69b4;
+    --glass-bg: rgba(255,255,255,0.7);
+}
+
+body{
+    background: linear-gradient(135deg,#fdfbfb 0%, #ebedee 100%),
+                linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    background-blend-mode:multiply;
+    background-attachment:fixed;
+    min-height:100vh;
+    font-family: 'Microsoft YaHei', "PingFang SC", sans-serif;
+    color: #555;
+}
+/*板块设计*/
+.navbar {
+    background-color: var(--glass-bg) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--sakura-pink);
+}
+
+.navbar-brand {
+    color: var(--glass-bg) !important;
+    backdrop-filter :blur(8px);
+    border:1px solid rgba(255, 183, 197, 0.5) !important;
+    border-radius:20px !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+/*卡片设计*/
+.card {
+    background:var(--glass-bg)!important;
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(255, 183, 197, 0.5)!important;
+    border-radius:20px !important;
+    transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: scale(1.02); /* 悬浮时微放 */
+    box-shadow: 0 15px 35px rgba(255, 183, 197, 0.4) !important;
+}
+
+.card-title {
+    color: var(--accent-color);
+    font-weight: bold;
+    border-bottom: 2px dashed var(--sakura-pink);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- 5. 列表项改造 --- */
+.list-group-item {
+    background: transparent !important;
+    border-color: rgba(255, 183, 197, 0.2) !important;
+    transition: 0.3s;
+}
+
+.list-group-item:hover {
+    background: var(--sakura-light) !important;
+    padding-left: 30px !important; /* 悬浮时向右滑动的动画 */
+}
+
+/* --- 6. 按钮改造：呼吸感 --- */
+.btn-primary, .btn-outline-success {
+    border-radius: 50px !important; /* 胶囊形状 */
+    padding: 10px 25px !important;
+    border: none !important;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4) !important;
+    transition: 0.3s !important;
+}
+
+.btn-primary:hover {
+    letter-spacing: 2px;
+    box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6) !important;
+    filter: brightness(1.1);
+}
+
+/* --- 7. 输入框 (Input) 定制 --- */
+#name {
+    border: 2px solid var(--sakura-pink);
+    border-radius: 10px;
+    padding: 8px 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#name:focus {
+    box-shadow: 0 0 10px var(--sakura-pink);
+    border-color: var(--accent-color);
+}
+
+/* --- 8. 专属彩蛋：给页面加点“灵动感” --- */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 可以把这个类加在你喜欢的图片或文字上 */
+.anime-float {
+    animation: float 3s ease-in-out infinite;
+}
+   
+                

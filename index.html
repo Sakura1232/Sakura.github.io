@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sakura - 主页</title>
+        
+        <script src="anime.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded',function(){
+                const form = document.querySelector('form');
+                if(form) {
+                    form.addEventListener('submit',function(e){
+                        alert('hello ' + document.querySelector('#name').value +' ! Welcome to my homepage!');
+                        e.preventDefault();
+                    });
+                }
+                const generationBtn = document.querySelector('#generate-btn');
+                const quoteText = document.querySelector('#quote-id');
+                const quoteAuthor = document.querySelector('#quote-author');
+                if(generationBtn){
+                    generationBtn.addEventListener('click',function(){
+                        if(typeof quotes !== 'undefined' && quotes.length > 0) {
+                            const randomIndex = Math.floor(Math.random() * quotes.length);
+                            const selectedQuote = quotes[randomIndex];
+                            quoteText.textContent = "“" + selectedQuote.text + "”";
+                            quoteAuthor.textContent = "—— " + selectedQuote.author;
+                            quoteAuthor.style.display = 'block'; 
+                        }
+                    });
+                }
+            });
+        </script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="index.html">Sakura</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">关于我</a></li>
+                        <li class="nav-item"><a class="nav-link " href="anime.html">喜欢的动漫</a></li>
+                        <li class="nav-item"><a class="nav-link " href="characters.html">喜欢的角色</a></li>
+                        <li class="nav-item"><a class="nav-link " href="games.html">极客/游戏/其他</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container pb-5">
+<div class="card mt-4 mx-auto shadow-sm" style="max-width: 800px;">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-4">关于我</h3>
+                            <p class="card-text fs-5">
+                                大家好！我叫<strong>Sakura</strong>，是来自武汉一所双非学校的<strong>人工智能专业</strong>学生。<span>Ciallo~(∠・ω< )⌒★</span>
+                            </p>
+                            <p class="card-text fs-5">
+                                我喜欢二次元的各种事物。在这里记录一下自己的成分：
+                            </p>
+                            <ul class="list-group list-group-flush fs-5">
+                                <li class="list-group-item">📺 <strong>最喜欢的动漫：</strong>《无职转生》</li>
+                                <li class="list-group-item">👤 <strong>最喜欢的角色：</strong>黍</li>
+                                <li class="list-group-item">🎮 <strong>最喜欢的游戏：</strong>《赛博朋克2077》</li>
+                            </ul>
+
+                            <p class="card-text fs-6 mt-4">
+
+                                本网站为本人学习cs50后所创,主要运用了bookstrap框架和一些js代码，欢迎大家留言交流！
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <form class="text-center mt-5">
+                        <input autocomplete="off" autofocus id = 'name' placeholder="name" type = "text">
+
+                        <input type="submit" class = "btn btn-primary btn-lg" value="提交">
+                    </form>
+                    <div class="card mt-5 mx-auto text-center shadow-sm" style="max-width: 600px;">
+                    <div class="card body">
+                        <p class="fs-5 mb-3" id="quote-id">抽取今日角色台词</p>
+                        <footer class="blockquote-footer" id="quote-author" style="display: none;"></footer>
+                        <button class="btn btn-outline-success mt-3" id="generate-btn">🎲 抽取台词</button>
+                    </div>
+                </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>
