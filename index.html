@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sakura 的二次元个人主页 — 动漫、绘画、音乐爱好者" />
+  <meta property="og:title" content="Sakura の主页 🌸" />
+  <meta property="og:description" content="一个充满二次元气息的个人网站" />
+  <meta property="og:type" content="website" />
+  <title>Sakura の主页 🌸</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 自定义光标 -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- 樱花飘落容器 -->
+  <div class="sakura-container" id="sakuraContainer"></div>
+
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">🌸 Sakura</a>
+      <ul class="nav-links">
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#interests">兴趣爱好</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#works">作品</a></li>
+        <li><a href="#contact">联系我</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero 区域 -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-circles">
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+      <div class="circle c3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar" id="avatar">
+          <span class="avatar-emoji">🌸</span>
+        </div>
+      </div>
+      <h1 class="hero-title">
+        <span class="hello">こんにちは！</span>
+        <span class="name">我是 <em>Sakura</em></span>
+      </h1>
+      <p class="hero-subtitle typewriter" id="typewriter"></p>
+      <div class="hero-badges">
+        <span class="badge">🎌 动漫迷</span>
+        <span class="badge">🎨 插画师</span>
+        <span class="badge">🎵 音乐爱好者</span>
+        <span class="badge">💻 前端开发</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#about" class="btn btn-primary">了解我 ✨</a>
+        <a href="#contact" class="btn btn-outline">联系我 💌</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-arrow"></div>
+      <span>向下滚动</span>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title"><span>关于我</span> <small>About Me</small></h2>
+      <div class="about-grid">
+        <div class="about-card profile-card reveal">
+          <div class="profile-avatar">
+            <span>🌸</span>
+          </div>
+          <h3>Sakura</h3>
+          <p class="profile-tagline">「世界因二次元而美好」</p>
+          <ul class="profile-meta">
+            <li>📍 日本語学習中</li>
+            <li>🎂 生于春季</li>
+            <li>🌙 夜行动物</li>
+            <li>☕ 抹茶拿铁爱好者</li>
+          </ul>
+        </div>
+        <div class="about-text reveal">
+          <p>
+            欢迎来到我的小世界！🌸 我是一个深度二次元爱好者，
+            从小就对动漫、漫画和轻小说充满热情。
+          </p>
+          <p>
+            平时喜欢画插画、听 V 家曲子、追各种新番，
+            偶尔也会写写同人文。最近在学习前端开发，
+            希望能用代码为二次元文化贡献一份力量！
+          </p>
+          <p>
+            座右铭：<strong>「每一天都要做让自己心动的事。」</strong>
+          </p>
+          <div class="stat-row">
+            <div class="stat">
+              <span class="stat-num" data-target="300">0</span>
+              <span class="stat-label">追过的番剧</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="120">0</span>
+              <span class="stat-label">画过的插画</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="500">0</span>
+              <span class="stat-label">收藏的歌曲</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 兴趣爱好 -->
+  <section class="section interests" id="interests">
+    <div class="container">
+      <h2 class="section-title"><span>兴趣爱好</span> <small>Interests</small></h2>
+      <div class="interests-grid">
+        <div class="interest-card reveal" data-delay="0">
+          <div class="interest-icon">🎌</div>
+          <h3>动漫 &amp; 漫画</h3>
+          <p>深度宅，对各种类型的番剧都有涉猎。最爱治愈系和悬疑推理类作品。</p>
+          <div class="tag-list">
+            <span class="tag">进击的巨人</span>
+            <span class="tag">紫罗兰永恒花园</span>
+            <span class="tag">鬼灭之刃</span>
+            <span class="tag">Your Lie in April</span>
+          </div>
+        </div>
+        <div class="interest-card reveal" data-delay="100">
+          <div class="interest-icon">🎨</div>
+          <h3>插画 &amp; 设计</h3>
+          <p>使用 Procreate 和 Clip Studio Paint 创作，擅长描绘柔和的二次元风格。</p>
+          <div class="tag-list">
+            <span class="tag">原创角色</span>
+            <span class="tag">同人插画</span>
+            <span class="tag">UI 设计</span>
+            <span class="tag">像素画</span>
+          </div>
+        </div>
+        <div class="interest-card reveal" data-delay="200">
+          <div class="interest-icon">🎵</div>
+          <h3>音乐</h3>
+          <p>Vocaloid、J-POP 和 ACG 音乐的忠实听众，偶尔用 DAW 制作一些小曲子。</p>
+          <div class="tag-list">
+            <span class="tag">YOASOBI</span>
+            <span class="tag">Eve</span>
+            <span class="tag">米津玄師</span>
+            <span class="tag">初音未来</span>
+          </div>
+        </div>
+        <div class="interest-card reveal" data-delay="300">
+          <div class="interest-icon">📚</div>
+          <h3>轻小说</h3>
+          <p>热爱异世界转生和恋爱喜剧类型的轻小说，书架上已经摞得很高了。</p>
+          <div class="tag-list">
+            <span class="tag">re:零</span>
+            <span class="tag">俺妹</span>
+            <span class="tag">刀剑神域</span>
+            <span class="tag">魔法少女小圆</span>
+          </div>
+        </div>
+        <div class="interest-card reveal" data-delay="400">
+          <div class="interest-icon">🎮</div>
+          <h3>游戏</h3>
+          <p>原神、明日方舟日常在线，偶尔玩玩 Galgame，享受精彩的剧情体验。</p>
+          <div class="tag-list">
+            <span class="tag">原神</span>
+            <span class="tag">明日方舟</span>
+            <span class="tag">Blue Archive</span>
+            <span class="tag">BanG Dream</span>
+          </div>
+        </div>
+        <div class="interest-card reveal" data-delay="500">
+          <div class="interest-icon">💻</div>
+          <h3>前端开发</h3>
+          <p>用代码构建充满二次元气息的网页，把脑海中的设计变成现实。</p>
+          <div class="tag-list">
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Vue.js</span>
+            <span class="tag">动效设计</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="section-title"><span>技能树</span> <small>Skills</small></h2>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3>🎨 创作技能</h3>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>插画（Procreate / CSP）</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>UI / 视觉设计</span>
+              <span>78%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>像素艺术</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>音乐制作（DAW）</span>
+              <span>55%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>💻 编程技能</h3>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>HTML / CSS</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>JavaScript</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Vue.js</span>
+              <span>72%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>动效 / Canvas</span>
+              <span>65%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品展示 -->
+  <section class="section works" id="works">
+    <div class="container">
+      <h2 class="section-title"><span>作品展示</span> <small>Works</small></h2>
+      <div class="works-grid">
+        <div class="work-card reveal" data-delay="0">
+          <div class="work-cover" style="background: linear-gradient(135deg, #ffb7c5 0%, #ff8fab 100%);">
+            <span class="work-emoji">🌸</span>
+          </div>
+          <div class="work-info">
+            <h3>樱花主题个人站</h3>
+            <p>这个网站！用 HTML / CSS / JS 搭建的二次元风格主页。</p>
+            <div class="work-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal" data-delay="100">
+          <div class="work-cover" style="background: linear-gradient(135deg, #c8b6ff 0%, #9381ff 100%);">
+            <span class="work-emoji">🎨</span>
+          </div>
+          <div class="work-info">
+            <h3>原创角色插画集</h3>
+            <p>系列原创角色设计，以日式和风少女为主题的插画作品集。</p>
+            <div class="work-tags">
+              <span>Procreate</span><span>原创</span><span>插画</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal" data-delay="200">
+          <div class="work-cover" style="background: linear-gradient(135deg, #a8dadc 0%, #457b9d 100%);">
+            <span class="work-emoji">🎵</span>
+          </div>
+          <div class="work-info">
+            <h3>ACG 翻唱 EP</h3>
+            <p>翻唱了几首喜欢的 Vocaloid 曲子，加入了自己的编曲风格。</p>
+            <div class="work-tags">
+              <span>音乐</span><span>Vocaloid</span><span>翻唱</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card reveal" data-delay="300">
+          <div class="work-cover" style="background: linear-gradient(135deg, #ffd6a5 0%, #ff9f1c 100%);">
+            <span class="work-emoji">🎮</span>
+          </div>
+          <div class="work-info">
+            <h3>像素 RPG Demo</h3>
+            <p>用 JavaScript 开发的浏览器像素风 RPG 游戏小 Demo，二次元风格地图。</p>
+            <div class="work-tags">
+              <span>JavaScript</span><span>Canvas</span><span>游戏</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系我 -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title"><span>联系我</span> <small>Contact</small></h2>
+      <div class="contact-wrap">
+        <div class="contact-text reveal">
+          <p>如果你也是二次元爱好者，欢迎来交流！🌸</p>
+          <p>无论是约稿、合作还是纯粹聊动漫，都欢迎联系我。</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="Bilibili">
+              <span class="social-icon">📺</span>
+              <span>Bilibili</span>
+            </a>
+            <a href="#" class="social-btn" title="微博">
+              <span class="social-icon">🌐</span>
+              <span>微博</span>
+            </a>
+            <a href="#" class="social-btn" title="Twitter/X">
+              <span class="social-icon">🐦</span>
+              <span>Twitter</span>
+            </a>
+            <a href="#" class="social-btn" title="GitHub">
+              <span class="social-icon">💻</span>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-group">
+            <label for="name">昵称</label>
+            <input type="text" id="name" name="name" placeholder="你的名字 / 昵称" required />
+          </div>
+          <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">留言</label>
+            <textarea id="message" name="message" rows="4" placeholder="想说的话都可以写在这里～" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            发送留言 💌
+          </button>
+          <p class="form-success" id="formSuccess">消息已发送！谢谢你的留言 🌸</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">🌸 Sakura</p>
+      <p class="footer-quote">「この世界に生まれてよかった」</p>
+      <p class="footer-copy">© 2024 Sakura · Made with 💖 and lots of matcha</p>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
